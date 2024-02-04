@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors - FAK</title>
+
+    <link rel="stylesheet" href="styles/rock-paper-scissors.css">
+  </head>
+  <body>
+    <p class="title">Rock | Paper | Scissors</p>
+
+    <button onclick=" 
+      playGame ('Rock');
+    " class="move-button"><img src="rock-emoji.png" class="move-icon"></button>
+
+    <button onclick="
+      playGame ('Paper');
+    " class="move-button"><img src="paper-emoji.png" class="move-icon"></button>
+
+    <button onclick="
+      playGame ('Scissors');
+    " class="move-button"><img src="scissors-emoji.png" class="move-icon"></button>
+
+    <p class="js-ans result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button onclick="
+      score.W = 0;
+      score.L = 0;
+      score.T = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    " class="reset-score-button">Reset Score</button>
+
+    <button class="auto-play-button" onclick="autoplay()">Auto Play</button>
+
+    <script src="scripts/rock-paper-scissors.js"></script>
+  </body>
+</html>
